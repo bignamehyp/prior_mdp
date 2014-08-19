@@ -11,6 +11,7 @@ public class SparseMultiplierThread extends Thread{
 	public Matrix v2;
 	public int sparseness;
 	
+	@Override
 	public void run(){
 		for(int i = startIndex; i < endIndex; i++){
 			double prod = 0;

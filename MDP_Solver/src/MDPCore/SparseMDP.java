@@ -2,8 +2,6 @@ package MDPCore;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Vector;
-
 import Jama.Matrix;
 
 /**
@@ -305,7 +303,6 @@ public class SparseMDP {
 		while(iter < maxIter * numActions * numStates){
 			iter++;
 			int [][] lastUpdates = new int[numStates][numActions];
-			Matrix PPi = TransitionGivenPolicy();
 			MarkovChain mc = new MarkovChain(getTransitionMatrix(0),  numStates);
  			int s = getRandomState();
 			int a = eGreedyAction(s,epislon);
